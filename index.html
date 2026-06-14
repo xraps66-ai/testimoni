@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Testimoni Neon</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: radial-gradient(circle at top, #0f2027, #000000);
+    color: #00ffff;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Judul */
+h1 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    text-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff;
+}
+
+/* Grid */
+.container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    max-width: 500px;
+    margin: auto;
+}
+
+/* Card */
+.card {
+    background: rgba(0,0,0,0.6);
+    border-radius: 12px;
+    padding: 10px;
+    border: 1px solid #00ffff55;
+    box-shadow: 0 0 10px #00ffff33;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px #00ffff, 0 0 40px #00ffff55;
+}
+
+.card img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.name {
+    margin-top: 6px;
+    font-size: 13px;
+    text-shadow: 0 0 5px #00ffff;
+}
+
+/* Tombol */
+.btn {
+    display: inline-block;
+    margin-top: 6px;
+    padding: 6px 10px;
+    border: 1px solid #00ffff;
+    color: #00ffff;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 12px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #00ffff;
+    color: black;
+    box-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff;
+}
+
+/* 🔥 WATERMARK */
+.watermark {
+    position: fixed;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 14px;
+    color: #00ffff;
+    opacity: 0.8;
+    text-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff;
+    pointer-events: none;
+}
+</style>
+
+</head>
+<body>
+
+<h1>⚡ TESTIMONI ⚡</h1>
+
+<div class="container"></div>
+
+<!-- WATERMARK -->
+<div class="watermark">By RapsX</div>
+
+<script>
+let data = [
+"https://i.postimg.cc/6Qkspgrs/Whats-App-Image-2026-05-31-at-18-28-07.jpg",
+"https://i.postimg.cc/WpfGqVDf/Whats-App-Image-2026-05-31-at-19-07-03.jpg",
+"https://i.postimg.cc/LsTf9FKY/Whats-App-Image-2026-05-31-at-19-07-39.jpg",
+"https://i.postimg.cc/Zn9yx99x/Whats-App-Image-2026-05-31-at-19-08-28.jpg",
+"https://i.postimg.cc/KzW1jZ9Y/Whats-App-Image-2026-05-31-at-19-09-25.jpg",
+"https://i.postimg.cc/GmRxdQTn/Whats-App-Image-2026-05-31-at-20-04-45.jpg",
+"https://i.postimg.cc/52p7rG7n/Whats-App-Image-2026-05-31-at-20-34-33.jpg",
+"https://i.postimg.cc/4yCBtTyJ/Whats-App-Image-2026-05-31-at-21-42-49.jpg",
+"https://i.postimg.cc/Jzhcshxq/Whats-App-Image-2026-05-31-at-22-15-37.jpg",
+"https://i.postimg.cc/nrZqpVMw/Whats-App-Image-2026-06-01-at-13-08-03.jpg",
+"https://i.postimg.cc/wTwDYpz7/Whats-App-Image-2026-06-01-at-13-08-20.jpg",
+"https://i.postimg.cc/KzhMDc7x/Whats-App-Image-2026-06-01-at-13-22-00.jpg",
+"https://i.postimg.cc/d3tD5hL4/Whats-App-Image-2026-06-01-at-18-32-39.jpg",
+"https://i.postimg.cc/J4FtQ4MC/Whats-App-Image-2026-06-02-at-16-25-46-(1).jpg",
+"https://i.postimg.cc/4dX33YbK/Whats-App-Image-2026-06-02-at-16-26-18.jpg",
+"https://i.postimg.cc/0Qt92cy7/Whats-App-Image-2026-06-02-at-16-27-08.jpg",
+"https://i.postimg.cc/wxG9CfPX/Whats-App-Image-2026-06-02-at-16-28-24.jpg",
+"https://i.postimg.cc/1zBQJJ6d/Whats-App-Image-2026-06-02-at-16-29-01.jpg",
+"https://i.postimg.cc/k4HLpZ4J/Whats-App-Image-2026-06-02-at-16-29-28.jpg",
+"https://i.postimg.cc/CM3xZrNS/Whats-App-Image-2026-06-02-at-16-30-42.jpg",
+"https://i.postimg.cc/y8P1b1z7/Whats-App-Image-2026-06-02-at-16-31-11.jpg",
+"https://i.postimg.cc/RVxvC6Sm/Whats-App-Image-2026-06-02-at-16-31-31.jpg",
+"https://i.postimg.cc/pLqvBsDL/Whats-App-Image-2026-06-03-at-06-54-32.jpg",
+"https://i.postimg.cc/bJ2jp84b/Whats-App-Image-2026-06-03-at-06-55-42.jpg",
+"https://i.postimg.cc/rsC3wpJv/Whats-App-Image-2026-06-03-at-06-57-01.jpg",
+"https://i.postimg.cc/xjKWRsQ2/Whats-App-Image-2026-06-03-at-06-57-37.jpg",
+"https://i.postimg.cc/HkLRTdyx/Whats-App-Image-2026-06-03-at-06-58-02.jpg",
+"https://i.postimg.cc/SQ7v8JLX/Whats-App-Image-2026-06-03-at-06-58-37.jpg",
+"https://i.postimg.cc/T3h7Z0ZS/Whats-App-Image-2026-06-03-at-06-59-29.jpg",
+"https://i.postimg.cc/qRrGMx53/Whats-App-Image-2026-06-03-at-07-00-26.jpg",
+"https://i.postimg.cc/prXYKXxn/Whats-App-Image-2026-06-03-at-07-01-00.jpg",
+"https://i.postimg.cc/X7qkJJQR/Whats-App-Image-2026-06-03-at-07-02-09.jpg",
+"https://i.postimg.cc/63zC6JR5/Whats-App-Image-2026-06-03-at-07-02-45.jpg",
+"https://i.postimg.cc/XNH9TW4J/Whats-App-Image-2026-06-03-at-08-57-41.jpg",
+"https://i.postimg.cc/FFJ6KTzL/Whats-App-Image-2026-06-04-at-10-02-40.jpg"
+];
+
+let container = document.querySelector(".container");
+
+data.forEach((img, i) => {
+    container.innerHTML += `
+    <div class="card">
+        <img src="${img}">
+        <div class="name">Testimoni ${i+1}</div>
+        <a class="btn" href="https://wa.me/6285177892006" target="_blank">ORDER</a>
+    </div>`;
+});
+</script>
+
+</body>
+</html>
