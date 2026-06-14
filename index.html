@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Testimoni RapsX V13</title>
+<title>Testimoni RapsX V14</title>
 
 <style>
 * {
@@ -44,6 +44,8 @@ h1 {
     border: 1px solid #00ffff55;
     box-shadow: 0 0 10px #00ffff33;
     transition: 0.3s;
+    position: relative;
+    overflow: hidden;
 }
 
 .card:hover {
@@ -51,11 +53,25 @@ h1 {
     box-shadow: 0 0 20px #00ffff, 0 0 40px #00ffff55;
 }
 
+/* GAMBAR PROTEK */
 .card img {
     width: 100%;
     border-radius: 8px;
+    pointer-events: none;
+    user-select: none;
+    -webkit-user-drag: none;
 }
 
+/* OVERLAY ANTI TAP */
+.overlay {
+    position: absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+}
+
+/* Nama */
 .name {
     margin-top: 6px;
     font-size: 13px;
@@ -78,19 +94,17 @@ h1 {
 .btn:hover {
     background: #00ffff;
     color: black;
-    box-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff;
 }
 
-/* 🔥 WATERMARK */
+/* WATERMARK */
 .watermark {
     position: fixed;
     bottom: 10px;
     left: 50%;
     transform: translateX(-50%);
     font-size: 14px;
-    color: #00ffff;
     opacity: 0.8;
-    text-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff;
+    text-shadow: 0 0 10px #00ffff;
     pointer-events: none;
 }
 </style>
@@ -98,14 +112,19 @@ h1 {
 </head>
 <body>
 
-<h1>⚡ TESTIMONI RapsX V13 ⚡</h1>
+<h1>⚡ TESTIMONI RapsX V14 ⚡</h1>
 
 <div class="container"></div>
 
-<!-- WATERMARK -->
 <div class="watermark">By RapsX</div>
 
 <script>
+// 🔒 DISABLE MENU & SELECT
+document.addEventListener("contextmenu", e => e.preventDefault());
+document.addEventListener("selectstart", e => e.preventDefault());
+document.addEventListener("dragstart", e => e.preventDefault());
+
+// DATA GAMBAR (ISI SEMUA PUNYA LU)
 let data = [
 "https://i.postimg.cc/6Qkspgrs/Whats-App-Image-2026-05-31-at-18-28-07.jpg",
 "https://i.postimg.cc/WpfGqVDf/Whats-App-Image-2026-05-31-at-19-07-03.jpg",
@@ -146,10 +165,12 @@ let data = [
 
 let container = document.querySelector(".container");
 
+// RENDER
 data.forEach((img, i) => {
     container.innerHTML += `
     <div class="card">
         <img src="${img}">
+        <div class="overlay"></div>
         <div class="name">Testimoni ${i+1}</div>
         <a class="btn" href="https://wa.me/6285177892006" target="_blank">ORDER</a>
     </div>`;
