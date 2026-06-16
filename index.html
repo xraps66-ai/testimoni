@@ -13,17 +13,22 @@
     font-family: 'Poppins', sans-serif;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
-    background: radial-gradient(circle at top, #0f2027, #000000);
-    color: #00ffff;
+    background: radial-gradient(circle at top, #2a1b4a, #0f001a);
+    color: #e0b3ff;
     text-align: center;
     padding: 20px;
+    -webkit-tap-highlight-color: transparent; /* Hilangkan efek klik Android */
 }
 
 h1 {
     font-size: 28px;
     margin-bottom: 20px;
-    text-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff;
+    text-shadow: 0 0 10px #c026d3, 0 0 20px #c026d3;
 }
 
 .container {
@@ -35,18 +40,23 @@ h1 {
 }
 
 .card {
-    background: rgba(0,0,0,0.6);
+    background: rgba(15, 0, 30, 0.7);
     border-radius: 12px;
     padding: 10px;
-    border: 1px solid #00ffff55;
-    box-shadow: 0 0 10px #00ffff33;
-    transition: 0.3s;
+    border: 1px solid #c026d355;
+    box-shadow: 0 0 10px #c026d333;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); /* Super smooth */
     position: relative;
+    overflow: hidden;
 }
 
 .card:hover {
     transform: scale(1.05);
-    box-shadow: 0 0 20px #00ffff, 0 0 40px #00ffff55;
+    box-shadow: 0 0 25px #c026d3, 0 0 45px #c026d355;
+}
+
+.card:active {
+    transform: scale(0.98); /* Sedikit press effect yang halus */
 }
 
 .card img {
@@ -55,33 +65,38 @@ h1 {
     cursor: zoom-in;
     user-select: none;
     -webkit-user-select: none;
+    -webkit-tap-highlight-color: transparent;
 }
 
 .name {
     margin-top: 6px;
     font-size: 13px;
-    text-shadow: 0 0 5px #00ffff;
+    text-shadow: 0 0 5px #c026d3;
 }
 
 .btn {
     display: inline-block;
     margin-top: 8px;
     padding: 8px 14px;
-    border: 1px solid #00ffff;
-    color: #00ffff;
+    border: 1px solid #c026d3;
+    color: #e0b3ff;
     border-radius: 6px;
     text-decoration: none;
     font-size: 13px;
-    transition: 0.3s;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     position: relative;
     z-index: 10;
-    pointer-events: auto !important;
+    -webkit-tap-highlight-color: transparent;
 }
 
 .btn:hover {
-    background: #00ffff;
-    color: black;
-    box-shadow: 0 0 15px #00ffff, 0 0 25px #00ffff;
+    background: #c026d3;
+    color: white;
+    box-shadow: 0 0 15px #c026d3, 0 0 25px #c026d3;
+}
+
+.btn:active {
+    transform: scale(0.95);
 }
 
 .watermark {
@@ -90,9 +105,9 @@ h1 {
     left: 50%;
     transform: translateX(-50%);
     font-size: 14px;
-    color: #00ffff;
+    color: #c026d3;
     opacity: 0.8;
-    text-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff;
+    text-shadow: 0 0 10px #c026d3, 0 0 20px #c026d3;
     pointer-events: none;
 }
 </style>
