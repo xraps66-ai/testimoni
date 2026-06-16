@@ -52,6 +52,9 @@ h1 {
 .card img {
     width: 100%;
     border-radius: 8px;
+    cursor: zoom-in;
+    user-select: none;
+    -webkit-user-select: none;
 }
 
 .name {
@@ -143,15 +146,18 @@ let data = [
 "https://i.postimg.cc/6Qkspgrs/Whats-App-Image-2026-05-31-at-18-28-07.jpg",
 "https://i.postimg.cc/L8PWFfR0/Screenshot-20260616-092324.jpg",
 "https://i.postimg.cc/50KgCNbR/Screenshot-20260616-092450.jpg",
-"https://i.postimg.cc/fbTgtPYs/Screenshot-20260616-092600.jpg"  // Testimoni 39
+"https://i.postimg.cc/fbTgtPYs/Screenshot-20260616-092600.jpg"
 ];
 
 let container = document.querySelector(".container");
 
-data.forEach((img, i) => {
+data.forEach((imgUrl, i) => {
     container.innerHTML += `
     <div class="card">
-        <img src="${img}">
+        <img src="${imgUrl}" 
+             oncontextmenu="return false;" 
+             draggable="false"
+             alt="Testimoni ${i+1}">
         <div class="name">Testimoni ${i+1}</div>
         <a class="btn" href="https://wa.me/6285177892006" target="_blank">ORDER SEKARANG</a>
     </div>`;
