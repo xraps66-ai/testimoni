@@ -33,7 +33,7 @@
 
         .container {
             display: grid;
-            grid-template-columns: repeat(2, 1fr); /* selalu 2 kolom */
+            grid-template-columns: repeat(2, 1fr);
             gap: 16px;
             max-width: 700px;
             margin: 0 auto;
@@ -42,10 +42,11 @@
         .card {
             background: rgba(255, 255, 255, 0.08);
             border-radius: 14px;
-            padding: 18px 10px;
+            padding: 14px;
             text-align: center;
             border: 1px solid rgba(192, 38, 211, 0.3);
-            transition: all 0.3s ease;
+            transition: 0.3s;
+            backdrop-filter: blur(10px);
         }
 
         .card:hover {
@@ -54,65 +55,71 @@
         }
 
         .card h3 {
+            font-size: 13px;
+            margin-bottom: 8px;
             color: #f0c4ff;
-            font-size: 14px;
-            margin-bottom: 10px;
         }
 
         .card img {
             width: 100%;
-            max-width: 140px;
             aspect-ratio: 9 / 16;
             object-fit: cover;
-            border: 3px solid #c026d3;
             border-radius: 10px;
+            border: 3px solid #c026d3;
             box-shadow: 0 0 12px rgba(192, 38, 211, 0.5);
-            margin: 0 auto;
-            display: block;
-            transition: transform 0.3s ease;
         }
-
-        .card img:hover {
-            transform: scale(1.05);
-        }
-
     </style>
 </head>
+
 <body>
 
     <h1>Testimoni RapsX V13</h1>
 
     <div class="container">
 
-        <div class="card">
-            <h3>@username1</h3>
-            <img src="Screenshot_20260624_123438.jpg" alt="User 1">
-        </div>
+        <div class="card"><h3>Testimoni 1</h3><img src="Screenshot_20260624_123438.jpg"></div>
+        <div class="card"><h3>Testimoni 2</h3><img src="images/testi2.jpg"></div>
+        <div class="card"><h3>Testimoni 3</h3><img src="images/testi3.jpg"></div>
+        <div class="card"><h3>Testimoni 4</h3><img src="images/testi4.jpg"></div>
+        <div class="card"><h3>Testimoni 5</h3><img src="images/testi5.jpg"></div>
+        <div class="card"><h3>Testimoni 6</h3><img src="images/testi6.jpg"></div>
+        <div class="card"><h3>Testimoni 7</h3><img src="images/testi7.jpg"></div>
+        <div class="card"><h3>Testimoni 8</h3><img src="images/testi8.jpg"></div>
+        <div class="card"><h3>Testimoni 9</h3><img src="images/testi9.jpg"></div>
+        <div class="card"><h3>Testimoni 10</h3><img src="images/testi10.jpg"></div>
 
-        <div class="card">
-            <h3>@username2</h3>
-            <img src="images/testi2.jpg" alt="User 2">
-        </div>
+        <div class="card"><h3>Testimoni 11</h3><img src="images/testi11.jpg"></div>
+        <div class="card"><h3>Testimoni 12</h3><img src="images/testi12.jpg"></div>
+        <div class="card"><h3>Testimoni 13</h3><img src="images/testi13.jpg"></div>
+        <div class="card"><h3>Testimoni 14</h3><img src="images/testi14.jpg"></div>
+        <div class="card"><h3>Testimoni 15</h3><img src="images/testi15.jpg"></div>
+        <div class="card"><h3>Testimoni 16</h3><img src="images/testi16.jpg"></div>
+        <div class="card"><h3>Testimoni 17</h3><img src="images/testi17.jpg"></div>
+        <div class="card"><h3>Testimoni 18</h3><img src="images/testi18.jpg"></div>
+        <div class="card"><h3>Testimoni 19</h3><img src="images/testi19.jpg"></div>
+        <div class="card"><h3>Testimoni 20</h3><img src="images/testi20.jpg"></div>
 
-        <div class="card">
-            <h3>@username3</h3>
-            <img src="images/testi3.jpg" alt="User 3">
-        </div>
+        <div class="card"><h3>Testimoni 21</h3><img src="images/testi21.jpg"></div>
+        <div class="card"><h3>Testimoni 22</h3><img src="images/testi22.jpg"></div>
+        <div class="card"><h3>Testimoni 23</h3><img src="images/testi23.jpg"></div>
+        <div class="card"><h3>Testimoni 24</h3><img src="images/testi24.jpg"></div>
+        <div class="card"><h3>Testimoni 25</h3><img src="images/testi25.jpg"></div>
+        <div class="card"><h3>Testimoni 26</h3><img src="images/testi26.jpg"></div>
+        <div class="card"><h3>Testimoni 27</h3><img src="images/testi27.jpg"></div>
+        <div class="card"><h3>Testimoni 28</h3><img src="images/testi28.jpg"></div>
+        <div class="card"><h3>Testimoni 29</h3><img src="images/testi29.jpg"></div>
+        <div class="card"><h3>Testimoni 30</h3><img src="images/testi30.jpg"></div>
 
-        <div class="card">
-            <h3>@username4</h3>
-            <img src="images/testi4.jpg" alt="User 4">
-        </div>
-
-        <div class="card">
-            <h3>@username5</h3>
-            <img src="images/testi5.jpg" alt="User 5">
-        </div>
-
-        <div class="card">
-            <h3>@username6</h3>
-            <img src="images/testi6.jpg" alt="User 6">
-        </div>
+        <div class="card"><h3>Testimoni 31</h3><img src="images/testi31.jpg"></div>
+        <div class="card"><h3>Testimoni 32</h3><img src="images/testi32.jpg"></div>
+        <div class="card"><h3>Testimoni 33</h3><img src="images/testi33.jpg"></div>
+        <div class="card"><h3>Testimoni 34</h3><img src="images/testi34.jpg"></div>
+        <div class="card"><h3>Testimoni 35</h3><img src="images/testi35.jpg"></div>
+        <div class="card"><h3>Testimoni 36</h3><img src="images/testi36.jpg"></div>
+        <div class="card"><h3>Testimoni 37</h3><img src="images/testi37.jpg"></div>
+        <div class="card"><h3>Testimoni 38</h3><img src="images/testi38.jpg"></div>
+        <div class="card"><h3>Testimoni 39</h3><img src="images/testi39.jpg"></div>
+        <div class="card"><h3>Testimoni 40</h3><img src="images/testi40.jpg"></div>
 
     </div>
 
